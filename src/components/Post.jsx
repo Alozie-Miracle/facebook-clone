@@ -17,7 +17,7 @@ const Post = ({ post, imageUrl, name, photo, timeStamp })=> {
       { post && (
         <div className='p-5 bg-white mt-5 rounded-t-2xl shadow-sm '>
         <div className='flex items-center space-x-2 border-b'>
-          <img src={photo} alt="Profile" width={40} height={40} className='rounded-full' onClick={handleClick} />
+          <img src={photo} alt="Profile" width={40} height={40} className='rounded-full' onClick={handleClick} loading='lazy' />
           <div>
             <p className='font-md text-gray-400'>{name}</p>
             <p className='text-xs text-gray-500 p-1'>{ new Date(timeStamp?.toDate()).toLocaleString()}</p>
